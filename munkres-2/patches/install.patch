@@ -1,0 +1,19 @@
+Install target
+Index: munkres-2/Makefile
+===================================================================
+--- munkres-2.orig/Makefile	2011-01-29 10:38:24.000000000 +1100
++++ munkres-2/Makefile	2011-01-29 10:40:49.000000000 +1100
+@@ -49,3 +49,8 @@
+ 	rm -f testsuite
+ 	rm -f testsuite.cpp
+ 
++install: $(LIBRARY)
++	install -d $(DESTDIR)/usr/lib $(DESTDIR)/usr/include $(DESTDIR)/usr/lib/pkgconfig $(DESTDIR)/usr/share/pkgconfig
++	install libmunkres.so $(DESTDIR)/usr/lib
++	install libmunkres.a $(DESTDIR)/usr/lib
++	install matrix.cpp $(DESTDIR)/usr/include
++	install matrix.h $(DESTDIR)/usr/include
++	install munkres.h $(DESTDIR)/usr/include
++	install munkres.pc $(DESTDIR)/usr/lib/pkgconfig
++	install munkres.pc $(DESTDIR)/usr/share/pkgconfig
++	install libmunkres.la $(DESTDIR)/usr/lib

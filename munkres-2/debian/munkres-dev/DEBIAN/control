@@ -1,0 +1,12 @@
+Package: munkres-dev
+Source: munkres
+Version: 2-1
+Architecture: i386
+Maintainer: Silvio Cesare <silvio.cesare@gmail.com>
+Installed-Size: 136
+Depends: munkres (= 2-1)
+Section: libdevel
+Priority: extra
+Description: C++ development files of munkres library.
+  C++ development files of Munkres library to solve the assignment problem in
+  polynomial time.

@@ -1,0 +1,12 @@
+0626c78438deea425a1aa06a71738b5c  usr/include/munkres.h
+d1c936321399455ffefe73285d5c8260  usr/include/matrix.cpp
+362e534fdde646881fe699f72f9b2f89  usr/include/matrix.h
+65456c14c237b24d8a140525f18deb12  usr/lib/pkgconfig/munkres.pc
+235fea70cb44b5785062276d09a5b9c3  usr/lib/libmunkres.la
+24b2c1d0e97224ef34574649d281fb03  usr/lib/libmunkres.a
+ec33d6be3553c375dff21328e05fb9b4  usr/lib/libmunkres.so
+65456c14c237b24d8a140525f18deb12  usr/share/pkgconfig/munkres.pc
+54b22af6dbc33bd07b34d9e39350c286  usr/share/doc/munkres-dev/changelog.Debian.gz
+8ddc07f60170924e4ea3f2b46933e47b  usr/share/doc/munkres-dev/README
+d7fe3208c8b829b0359cfcce3a86777a  usr/share/doc/munkres-dev/copyright
+88ef481c5dfa37daa0fff250db2cadae  usr/share/doc/munkres-dev/README.Debian

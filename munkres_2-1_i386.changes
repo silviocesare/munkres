@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Fri, 28 Jan 2011 15:31:57 +1100
+Source: munkres
+Binary: munkres-dev munkres
+Architecture: source i386
+Version: 2-1
+Distribution: unstable
+Urgency: low
+Maintainer: Silvio Cesare <silvio.cesare@gmail.com>
+Changed-By: Silvio Cesare <silvio.cesare@gmail.com>
+Description: 
+ munkres    - Munkres library to solve the assignment problem.
+ munkres-dev - C++ development files of munkres library.
+Changes: 
+ munkres (2-1) unstable; urgency=low
+ .
+   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+Checksums-Sha1: 
+ 7bcd196e967f8cc89a7146856409dbe2c0cb1da7 707 munkres_2-1.dsc
+ 48e09ceeb4eb6753d08ed106c39f8c68887773b9 12275 munkres_2.orig.tar.gz
+ 7cca2a864d3b4bc4f726f801734a57f431ac5738 14177 munkres_2-1.diff.gz
+ 1ebe2f34d989da1a77d8a274ec6120ab108b4b7c 18552 munkres-dev_2-1_i386.deb
+ 876661db89cfc027cc7dd6e96c1a874c780ab63f 1484 munkres_2-1_i386.deb
+Checksums-Sha256: 
+ b0b26a6117c1d2d4e4b35bf2acf84f79ecaf3ec1dab7b951db7a6e2f706ef7a6 707 munkres_2-1.dsc
+ 1e026aa1c778a4b012d86f444951e4773755d7ada9e3c2135fb422b2ef0f1459 12275 munkres_2.orig.tar.gz
+ 8dbcb5c4c5fdef986113662420b5e1189f4a416f2e3b6f12d19adcf1e3123034 14177 munkres_2-1.diff.gz
+ 6cd48353a62a0067cf6d08cc6633f2b23796afeaa782e938148bfb0ba922de32 18552 munkres-dev_2-1_i386.deb
+ 06d594ffd86f5eb54a6a3a8332f0b7aa34096ac6fb9f0edd4f4fe7b4b645044d 1484 munkres_2-1_i386.deb
+Files: 
+ 4657543f8cd70208ae89e1141c3e450f 707 libs extra munkres_2-1.dsc
+ 815ad852d0837753773d9b2fe5e69df4 12275 libs extra munkres_2.orig.tar.gz
+ b6a19e398c2d57ff894d4b86ef3a16eb 14177 libs extra munkres_2-1.diff.gz
+ efb84046e7c9ac4568f6ecc504716408 18552 libdevel extra munkres-dev_2-1_i386.deb
+ 5a94e959a4508c611f8bd25e7db6be31 1484 libs extra munkres_2-1_i386.deb

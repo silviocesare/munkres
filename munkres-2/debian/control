@@ -1,0 +1,22 @@
+Source: munkres
+Priority: extra
+Maintainer: Silvio Cesare <silvio.cesare@gmail.com>
+Build-Depends: debhelper (>= 7), libstdc++6-4.3-dev
+Standards-Version: 3.7.3
+Section: libs
+Homepage:
+
+Package: munkres-dev
+Section: libdevel
+Architecture: any
+Depends: munkres (= ${binary:Version})
+Description: C++ development files of munkres library.
+  C++ development files of Munkres library to solve the assignment problem in
+  polynomial time.
+
+Package: munkres
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Munkres library to solve the assignment problem.
+  Munkres library to solve the assignment problem in polynomial time.

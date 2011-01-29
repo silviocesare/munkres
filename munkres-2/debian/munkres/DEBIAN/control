@@ -1,0 +1,9 @@
+Package: munkres
+Version: 2-1
+Architecture: i386
+Maintainer: Silvio Cesare <silvio.cesare@gmail.com>
+Installed-Size: 32
+Section: libs
+Priority: extra
+Description: Munkres library to solve the assignment problem.
+  Munkres library to solve the assignment problem in polynomial time.

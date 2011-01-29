@@ -1,0 +1,5 @@
+compile-as-library.patch
+subdirectory.patch
+install.patch
+pkgconfig.patch
+la.patch

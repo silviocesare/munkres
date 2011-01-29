@@ -1,0 +1,21 @@
+Pkg-config configuration.
+Index: munkres-2/munkres.pc
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ munkres-2/munkres.pc	2011-01-29 12:41:47.000000000 +1100
+@@ -0,0 +1,15 @@
++# munkres pkg-config source file
++
++prefix=/usr
++exec_prefix=${prefix}
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++
++Name: munkres
++Description: Munkres algorithm for solving the assignment problem
++Version: 2
++Requires:
++Conflicts:
++Libs: -L${libdir} -lmunkres
++Cflags: -I${includedir}
++

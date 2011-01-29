@@ -1,0 +1,15 @@
+# munkres pkg-config source file
+
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: munkres
+Description: Munkres algorithm for solving the assignment problem
+Version: 2
+Requires:
+Conflicts:
+Libs: -L${libdir} -lmunkres
+Cflags: -I${includedir}
+

@@ -1,0 +1,60 @@
+Build as a library.
+Index: munkres-2/Makefile
+===================================================================
+--- munkres-2.orig/Makefile	2011-01-28 15:42:11.000000000 +1100
++++ munkres-2/Makefile	2011-01-29 10:29:10.000000000 +1100
+@@ -6,11 +6,15 @@
+ 
+ CXXFLAGS = -Wall -I. # -ggdb3 -DDEBUG
+ 
++LIBRARY = munkres
+ PROGRAM = demo
+ 
+-SOURCES = main.cpp munkres.cpp
++SOURCES_DEMO = main.cpp
++OBJECTS_DEMO := $(patsubst %.cpp,%.o,$(SOURCES_DEMO))
++
++SOURCES = munkres.cpp
+ OBJECTS := $(patsubst %.cpp,%.o,$(SOURCES))
+-HEADERS := $(filter-out main.h,$(patsubst %.cpp,%.h,$(SOURCES))) matrix.h
++HEADERS := munkres.h matrix.h
+ UNITTESTS = unittests/singlesolution.h unittests/validsolution.h
+ 
+ # implementation
+@@ -20,24 +24,28 @@
+ .cpp.o : $(HEADERS)
+ 	$(CXX) $(CXXFLAGS) -c  -o $@ $<
+ 
+-all:	$(PROGRAM)
++all:	$(PROGRAM) $(LIBRARY)
++
++$(LIBRARY): $(OBJECTS) $(HEADERS)
++	$(CXX) -shared -o libmunkres.so $(OBJECTS)
++	ar rv libmunkres.a $(OBJECTS)
+
+-$(PROGRAM): $(OBJECTS) $(HEADERS)
+-	$(CXX) -o $(PROGRAM) $(OBJECTS)
++$(PROGRAM): $(OBJECTS_DEMO) $(LIBRARY)
++	$(CXX) -o $(PROGRAM) $(OBJECTS_DEMO) -lmunkres -L.
+ 
+ test:	testsuite
+ 	@echo "Running test suite."
+ 	@./testsuite
+ 
+-testsuite: testsuite.cpp $(filter-out main.o,$(OBJECTS))
+-	$(CXX) -I$(CXXTESTINCLUDEDIR) $(CXXFLAGS) -o $@ $^
++testsuite: testsuite.cpp $(LIBRARY)
++	$(CXX) -I$(CXXTESTINCLUDEDIR) $(CXXFLAGS) -o $@ $^ -lmunkres
+ 
+ testsuite.cpp:	$(UNITTESTS)
+ 	$(CXXTESTGEN) $(CXXTESTGENFLAGS) -o $@ --error-printer $^
+ 
+ clean:
+	rm -f $(PROGRAM)
+ 	rm -f $(OBJECTS)
++	rm -f $(OBJECTS_DEMO)
++	rm -f libmunkres.so
++	rm -f libmunkres.a
+ 	rm -f testsuite
+ 	rm -f testsuite.cpp
+ 
